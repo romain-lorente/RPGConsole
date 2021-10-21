@@ -2,7 +2,7 @@
 {
     class Vie
     {
-        private PointsDeVie pointsDeVie;
-        private PointsDeVieMax pointsDeVieMax;
+        private PointsDeVie _pointsDeVie;
+        private PointsDeVieMax _pointsDeVieMax;
     }
 }
