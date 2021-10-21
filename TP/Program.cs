@@ -6,7 +6,13 @@ namespace TP
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Personnage p1 = new Personnage();
+            Personnage p2 = new Personnage();
+
+            p1.Attaquer(p2, 250);
+            p2.Attaquer(p1, 1250);
+
+            Console.ReadLine();
         }
     }
 }
