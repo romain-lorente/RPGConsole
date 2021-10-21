@@ -11,5 +11,10 @@
 
             _vivant.DefinirStatutEnVie(estEnVie);
         }
+
+        public void RecevoirSoins(int soins)
+        {
+            _pointsDeVie.Ajouter(soins);
+        }
     }
 }
