@@ -1,6 +1,6 @@
 ﻿namespace TP
 {
-    class StatutVivant
+    class Vivant
     {
         private bool _vivant = true;
     }

@@ -3,6 +3,6 @@
     class Vie
     {
         private PointsDeVie _pointsDeVie;
-        private PointsDeVieMax _pointsDeVieMax;
+        private Vivant _vivant;
     }
 }
