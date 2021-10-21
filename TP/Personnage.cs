@@ -8,15 +8,50 @@ namespace TP
 {
     public class Personnage
     {
-        public int Niveau { get; }
-        public int PointsVie { get; }
-        public bool Vivant { get; }
+        int Niveau;
+        int PointsVie;
+        int PointsVieMax = 1000;
+        bool Vivant;
 
         public Personnage()
         {
             Niveau = 1;
-            PointsVie = 1000;
+            PointsVie = PointsVieMax;
             Vivant = true;
+        }
+
+        public void SubirDegats(int degats)
+        {
+            PointsVie -= degats;
+
+            if (PointsVie <= 0)
+            {
+                Vivant = false;
+                PointsVie = 0;
+            }
+        }
+
+        public void Soigner(int soins)
+        {
+            if(Vivant)
+            {
+                PointsVie += soins;
+
+                if(PointsVie > PointsVieMax)
+                {
+                    PointsVie = PointsVieMax;
+                }
+            }
+        }
+
+        public void Attaquer(Personnage cible)
+        {
+            cible.SubirDegats(100);
+        }
+
+        public void Soigner(Personnage cible)
+        {
+            cible.Soigner(100);
         }
     }
 }
