@@ -31,7 +31,7 @@ namespace TP
             }
         }
 
-        public void Soigner(int soins)
+        public void RecevoirSoins(int soins)
         {
             if(Vivant)
             {
@@ -51,7 +51,7 @@ namespace TP
 
         public void Soigner(Personnage cible)
         {
-            cible.Soigner(100);
+            cible.RecevoirSoins(100);
         }
     }
 }
