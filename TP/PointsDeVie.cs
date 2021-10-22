@@ -14,23 +14,33 @@
             return _pointsDeVie > 0;
         }
 
-        public void Ajouter(int soins)
+        public void Ajouter()
         {
             if(VieSuperieureAZero())
-                _pointsDeVie += soins;
+                _pointsDeVie += 250;
 
-            if (_pointsDeVie > 1000)
-                _pointsDeVie = 1000;
+            RemettreVieAuMaximum();
         }
 
-        public bool Retirer(int degats)
+        public bool Retirer()
         {
-            _pointsDeVie -= degats;
+            _pointsDeVie -= 500;
 
-            if (_pointsDeVie < 0)
-                _pointsDeVie = 0;
+            RemettreVieAZero();
 
             return VieSuperieureAZero();
+        }
+
+        private void RemettreVieAZero()
+        {
+            if (_pointsDeVie < 0)
+                _pointsDeVie = 0;
+        }
+
+        private void RemettreVieAuMaximum()
+        {
+            if (_pointsDeVie > 1000)
+                _pointsDeVie = 1000;
         }
     }
 }

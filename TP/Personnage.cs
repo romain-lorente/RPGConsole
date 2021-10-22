@@ -5,24 +5,24 @@
         private Vie _vie = new Vie();
         private Niveau _niveau = new Niveau();
 
-        public void SubirDegats(int degats)
+        public void SubirDegats()
         {
-            _vie.SubirDegats(degats);
+            _vie.SubirDegats();
         }
 
-        public void RecevoirSoins(int soins)
+        public void RecevoirSoins()
         {
-            _vie.RecevoirSoins(soins);
+            _vie.RecevoirSoins();
         }
 
-        public void Attaquer(Personnage cible, int degats)
+        public void Attaquer(Personnage cible)
         {
-            cible.SubirDegats(degats);
+            cible.SubirDegats();
         }
 
-        public void Soigner(Personnage cible, int soins)
+        public void Soigner(Personnage cible)
         {
-            cible.RecevoirSoins(soins);
+            cible.RecevoirSoins();
         }
     }
 }
